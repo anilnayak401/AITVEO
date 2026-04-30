@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.style.top = e.clientY + 'px';
     });
 
-    const hoverElements = document.querySelectorAll('a, button, .solution-card, .stat-item');
+    const hoverElements = document.querySelectorAll('a, button, .solution-card, .stat-item, .faq-item');
     hoverElements.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
@@ -47,12 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // FAQ Accordion
+    // FAQ Accordion - Toggle on Click
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
         const toggle = item.querySelector('.faq-toggle');
 
         question.addEventListener('click', () => {
@@ -61,13 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close all others
             faqItems.forEach(i => {
                 i.classList.remove('active');
-                i.querySelector('.faq-answer').style.maxHeight = null;
                 i.querySelector('.faq-toggle').className = 'fas fa-plus faq-toggle';
             });
 
             if (!isOpen) {
                 item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + "px";
                 toggle.className = 'fas fa-minus faq-toggle';
             }
         });
