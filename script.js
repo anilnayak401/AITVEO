@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const revealElements = document.querySelectorAll('.solution-card, .pillar-item, .stat-item, h2, .who-text, .who-visual, .bento-card, .who-card, .service-card-glass, .testimonial-card-glass, .section-header');
+    const revealElements = document.querySelectorAll('.solution-card, .pillar-item, .stat-item, h2, .who-top-branding, .who-text-content, .who-visual-content, .bento-card, .who-card, .service-card-glass, .testimonial-card-glass, .section-header, .reveal-item');
     revealElements.forEach((el, index) => {
         el.classList.add('reveal-item');
         el.style.transitionDelay = (index % 3) * 0.1 + 's';
@@ -92,6 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Desktop Hover with Delay
         item.addEventListener('mouseenter', () => {
             clearTimeout(closeTimeout);
+            // Close all other mega menus immediately
+            megaItems.forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
             item.classList.add('active');
         });
 
@@ -127,6 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape') {
                 megaItems.forEach(i => i.classList.remove('active'));
             }
+        });
+    });
+
+    // Close mega menus when hovering over non-mega nav items or logo
+    const nonMegaLinks = document.querySelectorAll('.nav-links > li:not(.has-mega), .logo, .header-right');
+    nonMegaLinks.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            megaItems.forEach(i => i.classList.remove('active'));
         });
     });
 
@@ -167,6 +179,104 @@ document.addEventListener('DOMContentLoaded', () => {
                 showSlide(index);
                 autoSlide = setInterval(nextSlide, slideInterval);
             });
+        });
+    }
+
+    // Testimonials Auto-scroll and Drag-to-Scroll
+    const testimonialGrid = document.querySelector('.testimonial-grid');
+    if (testimonialGrid) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let autoScrollInterval;
+
+        const startAutoScroll = () => {
+            stopAutoScroll(); 
+            autoScrollInterval = setInterval(() => {
+                if (!isDown) {
+                    const firstCard = testimonialGrid.querySelector('.testimonial-card-glass');
+                    if (!firstCard) return;
+                    
+                    const cardWidth = firstCard.offsetWidth + 24; 
+                    const maxScroll = testimonialGrid.scrollWidth - testimonialGrid.clientWidth;
+                    
+                    if (testimonialGrid.scrollLeft >= maxScroll - 20) {
+                        testimonialGrid.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        testimonialGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                    }
+                }
+            }, 5000); 
+        };
+
+        const stopAutoScroll = () => clearInterval(autoScrollInterval);
+
+        // Drag to scroll logic
+        testimonialGrid.addEventListener('mousedown', (e) => {
+            isDown = true;
+            testimonialGrid.classList.add('dragging');
+            startX = e.pageX - testimonialGrid.offsetLeft;
+            scrollLeft = testimonialGrid.scrollLeft;
+            stopAutoScroll();
+        });
+
+        testimonialGrid.addEventListener('mouseleave', () => {
+            if (isDown) {
+                isDown = false;
+                testimonialGrid.classList.remove('dragging');
+                startAutoScroll();
+            }
+        });
+
+        testimonialGrid.addEventListener('mouseup', () => {
+            isDown = false;
+            testimonialGrid.classList.remove('dragging');
+            startAutoScroll();
+        });
+
+        testimonialGrid.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - testimonialGrid.offsetLeft;
+            const walk = (x - startX) * 2;
+            testimonialGrid.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch events for mobile
+        testimonialGrid.addEventListener('touchstart', stopAutoScroll);
+        testimonialGrid.addEventListener('touchend', startAutoScroll);
+
+        // Button controls
+        const prevBtn = document.getElementById('testimonialPrev');
+        const nextBtn = document.getElementById('testimonialNext');
+
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                const cardWidth = testimonialGrid.querySelector('.testimonial-card-glass').offsetWidth + 30;
+                testimonialGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                stopAutoScroll();
+                setTimeout(startAutoScroll, 3000); // Restart auto-scroll after a delay
+            });
+
+            nextBtn.addEventListener('click', () => {
+                const cardWidth = testimonialGrid.querySelector('.testimonial-card-glass').offsetWidth + 30;
+                testimonialGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                stopAutoScroll();
+                setTimeout(startAutoScroll, 3000);
+            });
+        }
+
+        // Initialize auto-scroll
+        startAutoScroll();
+        
+        // Pause on mouse enter
+        testimonialGrid.addEventListener('mouseenter', () => {
+            stopAutoScroll();
+            testimonialGrid.style.cursor = 'grab';
+        });
+        
+        testimonialGrid.addEventListener('mouseleave', () => {
+            if (!isDown) startAutoScroll();
         });
     }
 

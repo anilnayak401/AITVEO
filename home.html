@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AITVEO | Engineering Intelligence. Delivering Impact.</title>
+    <title>AITVEO | Transforming Business Through AI, Data & Cloud</title>
+    <link rel="icon" type="image/png" href="assets/fevicon_logo.png">
     <meta name="description" content="AITVEO transforms enterprises with intelligent AI, data, and cloud solutions engineered for scale and security.">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,20 +20,47 @@
                     <img src="assets/1aitveo_logo.png" alt="AITVEO" class="logo-img">
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li class="has-mega">
-                        <a href="#services">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
+                        <a href="#">What We Do <i class="fas fa-chevron-down nav-arrow"></i></a>
                         <div class="mega-dropdown">
                             <div class="mega-content">
                                 <div class="mega-col">
-                                    <a href="#" class="mega-title">Consulting</a>
-                                    <a href="#" class="mega-title">Artificial Intelligence</a>
-                                    <a href="#" class="mega-title">Application Engineering</a>
+                                    <div class="mega-group">
+                                        <a href="consulting.html" class="mega-title">Consulting</a>
+                                    </div>
+                                    <div class="mega-group">
+                                        <a href="ai.html" class="mega-title">Artificial Intelligence</a>
+                                        <ul>
+                                            <li><a href="ai.html"><i class="fas fa-wand-magic-sparkles"></i> Gen AI</a></li>
+                                            <li><a href="ai.html"><i class="fas fa-robot"></i> Agentic AI</a></li>
+                                            <li><a href="ai.html"><i class="fas fa-gears"></i> Intelligent Automation</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-group">
+                                        <a href="application-engineering.html" class="mega-title">Application Engineering</a>
+                                        <ul>
+                                            <li><a href="application-engineering.html"><i class="fas fa-code"></i> Application Development & Support</a></li>
+                                            <li><a href="application-engineering.html"><i class="fas fa-layer-group"></i> Custom Application Development</a></li>
+                                            <li><a href="application-engineering.html"><i class="fas fa-rocket"></i> Platform Modernization</a></li>
+                                            <li><a href="application-engineering.html"><i class="fas fa-server"></i> Managed IT Services</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="mega-col">
-                                    <a href="#" class="mega-title">Product Engineering</a>
-                                    <a href="#" class="mega-title">Quality Engineering</a>
-                                    <a href="#" class="mega-title">Operational Services</a>
+                                    <div class="mega-group">
+                                        <a href="product-engineering.html" class="mega-title">Product Engineering</a>
+                                    </div>
+                                    <div class="mega-group">
+                                        <a href="quality-engineering.html" class="mega-title">Quality Engineering</a>
+                                    </div>
+                                    <div class="mega-group">
+                                        <a href="operational-services.html" class="mega-title">Operational Services</a>
+                                        <ul>
+                                            <li><a href="operational-services.html"><i class="fas fa-globe"></i> Global Capability Centre(GCC)</a></li>
+                                            <li><a href="operational-services.html"><i class="fas fa-users"></i> Resource on Demand</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="mega-col featured">
                                     <div class="featured-card">
@@ -47,7 +75,7 @@
                         <div class="mega-dropdown">
                             <div class="mega-content">
                                 <div class="mega-col">
-                                    <a href="#" class="mega-title">Public Sector</a>
+                                    <a href="public-sector.html" class="mega-title">Public Sector</a>
                                     <a href="#" class="mega-title">Construction</a>
                                     <a href="#" class="mega-title">BFSI</a>
                                 </div>
@@ -231,27 +259,25 @@
         </section>
 
         <!-- Who We Are (Bento Layout) -->
-        <section id="about" class="section-padding" style="background-color: var(--bg-light); border-top: 1px solid rgba(0, 45, 91, 0.05);">
+        <section id="about" class="section-padding" style="border-top: 1px solid rgba(0, 45, 91, 0.05);">
             <div class="container">
-                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <div class="section-header" style="text-align: center; margin-bottom: 30px;">
                     <h2><span class="text-outline">Who We</span> Are</h2>
+                    <p style="margin: 16px auto 0;">Built for Complexity. Designed for Scale.</p>
                 </div>
 
-                <div class="who-bento-grid">
-                    <!-- Main Branding Card -->
-                    <div class="who-card glass main-branding reveal-item">
-                        <div class="who-main-info">
-                            <div class="who-block">
-                                <span class="label">Built for Complexity</span>
-                                <h3 style="font-size: clamp(32px, 4vw, 48px); margin-bottom: 20px; line-height: 1.1;">Designed for<br>Scale.</h3>
-                                <p style="font-size: 18px; line-height: 1.6; color: var(--text-secondary);">AITVEO combines deep engineering expertise with AI-driven thinking to solve complex, high-impact problems without compromising on security, scalability, or speed.</p>
-                            </div>
-                        </div>
-                        <div class="who-main-visual">
-                            <img src="assets/who-we-are.png" alt="Engineering Intelligence">
-                        </div>
+                <!-- Top Branding Block -->
+                <div class="who-top-branding glass reveal-item">
+                    <div class="who-text-content">
+                        <p>AITVEO combines deep engineering expertise with AI-driven thinking to solve complex, high-impact problems without compromising on security, scalability, or speed.</p>
                     </div>
+                    <div class="who-visual-content">
+                        <img src="assets/who-we-are.png" alt="Engineering Intelligence">
+                    </div>
+                </div>
 
+                <!-- Lower Cards Grid -->
+                <div class="who-cards-grid">
                     <!-- Vision Card -->
                     <div class="who-card glass reveal-item">
                         <div class="who-block">
@@ -293,56 +319,90 @@
                     <p style="margin: 0 auto;">Enabling enterprises to transform, scale, and lead through AI, data, and cloud.</p>
                 </div>
                 
-                <div class="service-bento-grid">
-                    <div class="service-card-glass reveal-item">
-                        <div class="service-info">
-                            <h3><span class="bento-icon-shade"><i class="fas fa-chess-knight"></i></span> Consulting</h3>
-                            <p>Strategic advisory to navigate digital transformation and AI adoption.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-card-glass reveal-item">
-                        <div class="service-info">
-                            <h3><span class="bento-icon-shade"><i class="fas fa-brain"></i></span> Artificial Intelligence</h3>
-                            <p>Advanced GenAI and Agentic AI solutions engineered for enterprise scale.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-card-glass reveal-item">
-                        <div class="service-info">
-                            <h3><span class="bento-icon-shade"><i class="fas fa-laptop-code"></i></span> Application Engineering</h3>
-                            <p>Modern, scalable applications built with security and performance at the core.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-card-glass reveal-item">
-                        <div class="service-info">
-                            <h3><span class="bento-icon-shade"><i class="fas fa-cubes"></i></span> Product Engineering</h3>
-                            <p>End-to-end product development from ideation to production-ready platforms.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-card-glass reveal-item">
-                        <div class="service-info">
-                            <h3><span class="bento-icon-shade"><i class="fas fa-certificate"></i></span> Quality Engineering</h3>
-                            <p>Automated, AI-driven testing ensuring flawless performance and reliability.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-card-glass reveal-item">
-                        <div class="service-info">
-                            <h3><span class="bento-icon-shade"><i class="fas fa-terminal"></i></span> Operational Services</h3>
-                            <p>Managed cloud and infrastructure services for continuous optimization and scale.</p>
-                        </div>
-                    </div>
+        <div class="services-grid-3col">
+            <!-- Row 1: V, H, V -->
+            <!-- Card 1: Vertical -->
+            <div class="service-card-ref reveal-item">
+                <div class="card-image">
+                    <img src="assets/service_ai_premium.png" alt="Artificial Intelligence">
                 </div>
+                <div class="card-content">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Advanced GenAI and Agentic AI solutions engineered for enterprise scale and predictive intelligence.</p>
+                    <a href="ai.html" class="card-link">Learn More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2: Horizontal -->
+            <div class="service-card-ref horizontal reveal-item">
+                <div class="card-image">
+                    <img src="assets/service_consulting_premium.png" alt="Consulting">
+                </div>
+                <div class="card-content">
+                    <h3>Consulting</h3>
+                    <p>Strategic advisory to navigate digital transformation and AI adoption roadmap.</p>
+                    <a href="consulting.html" class="card-link">Learn More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3: Vertical -->
+            <div class="service-card-ref reveal-item">
+                <div class="card-image">
+                    <img src="assets/service_app_eng_premium.png" alt="Application Engineering">
+                </div>
+                <div class="card-content">
+                    <h3>Application Engineering</h3>
+                    <p>Modern, scalable applications built with security and performance at the core.</p>
+                    <a href="application-engineering.html" class="card-link">Learn More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Row 2: H, V, H -->
+            <!-- Card 4: Horizontal -->
+            <div class="service-card-ref horizontal reveal-item">
+                <div class="card-image">
+                    <img src="assets/service_prod_eng_1777721267820.png" alt="Product Engineering">
+                </div>
+                <div class="card-content">
+                    <h3>Product Engineering</h3>
+                    <p>End-to-end product development from ideation to production-ready platforms.</p>
+                    <a href="product-engineering.html" class="card-link">Learn More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 5: Vertical -->
+            <div class="service-card-ref reveal-item">
+                <div class="card-image">
+                    <img src="assets/service_ops_services_1777721300244.png" alt="Operational Services">
+                </div>
+                <div class="card-content">
+                    <h3>Operational Services</h3>
+                    <p>Managed cloud and infrastructure services for continuous optimization and scale.</p>
+                    <a href="operational-services.html" class="card-link">Learn More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 6: Horizontal -->
+            <div class="service-card-ref horizontal reveal-item">
+                <div class="card-image">
+                    <img src="assets/service_quality_eng_1777721282433.png" alt="Quality Engineering">
+                </div>
+                <div class="card-content">
+                    <h3>Quality Engineering</h3>
+                    <p>Automated, AI-driven testing ensuring flawless performance and security.</p>
+                    <a href="quality-engineering.html" class="card-link">Learn More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+
             </div>
         </section>
 
         <!-- Why Choose AITVEO -->
         <section id="why-choose" class="section-padding">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 40px;">
+                <div style="text-align: center; margin-bottom: 30px;">
                     <h2><span class="text-outline">Why Choose</span> AITVEO</h2>
                     <p style="margin: 0 auto;">Enabling enterprises to transform, scale, and lead through AI, data, and cloud.</p>
                 </div>
@@ -409,7 +469,7 @@
         <!-- Measurable Impact -->
         <section class="impact section-padding">
             <div class="container">
-                <div style="text-align: left; margin-bottom: 40px;">
+                <div style="text-align: left; margin-bottom: 30px;">
                     <h2><span class="text-outline">Measurable</span> Impact at Scale</h2>
                     <p>Delivering Excellence and Innovation Across Industries Worldwide</p>
                 </div>
@@ -438,42 +498,49 @@
         <!-- Testimonials Section -->
         <section id="testimonials" class="section-padding">
             <div class="container">
-                <div class="section-header reveal-item" style="text-align: center; margin-bottom: 60px;">
+                <div class="section-header reveal-item" style="text-align: center; margin-bottom: 30px;">
                     <h2><span class="text-outline">Testimonial</span>s</h2>
                     <p style="margin: 0 auto;">Powering Success for Global Enterprises</p>
                 </div>
                 
-                <div class="testimonial-grid">
-                    <div class="testimonial-card-glass reveal-item">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p>"AITVEO's AI-driven approach transformed our supply chain visibility, reducing operational costs by 25% in the first quarter."</p>
-                        <div class="testimonial-footer">
-                            <div class="author-info">
-                                <strong>Jameson Reed</strong>
-                                <span>CTO, Global Logistics Firm</span>
+                <div class="testimonial-carousel-wrapper reveal-item">
+                    <button class="carousel-nav prev" id="testimonialPrev"><i class="fas fa-chevron-left"></i></button>
+                    
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card-glass">
+                            <div class="card-body">
+                                <h4 class="card-author">Sunil Mantri</h4>
+                                <span class="card-role">CEO, Saturn Tech</span>
+                                <p class="card-quote">"AITVEO efficiently managed our large-scale network security environment with strong expertise in monitoring and access control. Their AI-driven approach enhanced threat detection and response time, while ensuring robust endpoint security and 24/7 support."</p>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card-glass">
+                            <div class="card-body">
+                                <h4 class="card-author">Sales Director</h4>
+                                <span class="card-role">Construction Engineering Services</span>
+                                <p class="card-quote">"With AITVEO, automation was not just about efficiency - it was about transformation. We saw a measurable reduction in manual effort and a significant improvement in turnaround time."</p>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card-glass">
+                            <div class="card-body">
+                                <h4 class="card-author">Founder & CEO</h4>
+                                <span class="card-role">A Financial Services Company</span>
+                                <p class="card-quote">"As a growing company, we needed a partner who could scale with us. AITVEO delivered agile, high-quality solutions that evolved with our business needs."</p>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card-glass">
+                            <div class="card-body">
+                                <h4 class="card-author">Founder & CEO</h4>
+                                <span class="card-role">EV Technology Company</span>
+                                <p class="card-quote">"AITVEO’s testing services brought a new level of discipline and confidence to our release cycles. Their structured QA approach, automation capabilities, and attention to detail significantly reduced defects in production and improved overall product quality."</p>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card-glass reveal-item">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p>"The speed of execution and depth of engineering expertise provided by AITVEO is unmatched. They are our go-to partner for Agentic AI."</p>
-                        <div class="testimonial-footer">
-                            <div class="author-info">
-                                <strong>Sarah Chen</strong>
-                                <span>Head of Innovation, Fortune 500 Bank</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card-glass reveal-item">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p>"Exceptional partnership and measurable impact. Their intelligent automation solutions have redefined our customer service efficiency."</p>
-                        <div class="testimonial-footer">
-                            <div class="author-info">
-                                <strong>Michael Vance</strong>
-                                <span>VP of Digital Transformation, Retail Giant</span>
-                            </div>
-                        </div>
-                    </div>
+
+                    <button class="carousel-nav next" id="testimonialNext"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>
@@ -535,13 +602,14 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="section-padding" style="background: var(--bg-light); text-align: center;">
-            <div class="container">
+        <section class="section-padding" style="text-align: center;">
+            <div class="container reveal-item">
                 <h2><span class="text-outline">Ready for</span> the Future?</h2>
                 <p style="margin: 0 auto 40px;">Experience the power of intelligent engineering.</p>
-                <a href="#" class="btn-main">Get In Touch</a>
+                <a href="#contact" class="btn-main">Get In Touch</a>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -552,19 +620,19 @@
                     <div class="footer-logo">
                         <img src="assets/1aitveo_logo.png" alt="AITVEO" class="light-logo">
                     </div>
-                    <p>Engineering intelligence. Delivering impact. AI, Data, and Cloud engineered to solve real business problems securely, scalably, and at speed.</p>
+                    <p>Transforming business through AI, Data, and Cloud engineered to solve real enterprise problems securely, scalably, and at speed.</p>
                 </div>
 
-                <!-- Services Column -->
+                <!-- What We Do Column -->
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4>What We Do</h4>
                     <ul>
-                        <li><a href="#">Consulting</a></li>
-                        <li><a href="#">Artificial Intelligence</a></li>
-                        <li><a href="#">Application Engineering</a></li>
-                        <li><a href="#">Product Engineering</a></li>
-                        <li><a href="#">Quality Engineering</a></li>
-                        <li><a href="#">Operational Services</a></li>
+                        <li><a href="consulting.html">Consulting</a></li>
+                        <li><a href="ai.html">Artificial Intelligence</a></li>
+                        <li><a href="application-engineering.html">Application Engineering</a></li>
+                        <li><a href="product-engineering.html">Product Engineering</a></li>
+                        <li><a href="quality-engineering.html">Quality Engineering</a></li>
+                        <li><a href="operational-services.html">Operational Services</a></li>
                     </ul>
                 </div>
 
@@ -572,7 +640,7 @@
                 <div class="footer-col">
                     <h4>Industries</h4>
                     <ul>
-                        <li><a href="#">Public Sector</a></li>
+                        <li><a href="public-sector.html">Public Sector</a></li>
                         <li><a href="#">Construction</a></li>
                         <li><a href="#">BFSI</a></li>
                         <li><a href="#">Healthcare</a></li>
@@ -589,8 +657,6 @@
                         <li><a href="#">Mission & Vision</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
                     </ul>
                 </div>
 
@@ -600,7 +666,7 @@
                     <ul class="social-list-vertical">
                         <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                        <li><a href="#"><i class="fab fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
                     </ul>
                 </div>
@@ -610,9 +676,13 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
                     <img src="assets/1aitveo_logo.png" alt="" class="light-logo footer-bottom-logo">
-                    <span>Engineering Intelligence</span>
+                    <span>Transforming Business Through AI, Data & Cloud</span>
                 </div>
                 <div class="footer-bottom-right">
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
                     <p>Copyright © 2026 Aitveo Technologies | All Rights Reserved.</p>
                 </div>
                 <a href="#home" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
